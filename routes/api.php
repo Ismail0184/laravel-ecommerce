@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\APIController;
+use App\Http\Controllers\APIControllerIsmail;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ use App\Http\Controllers\APIController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/allproduct', [APIControllerIsmail::class,'getAllProduct']);
 
 Route::get('/all-product', [APIController::class, 'getAllProduct']);
 Route::get('/all-category', [APIController::class, 'getAllCategory']);
