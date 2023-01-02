@@ -21,6 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/allproduct', [APIControllerIsmail::class,'getAllProduct']);
+Route::get('/allcategory', [APIControllerIsmail::class, 'getAllCategory']);
 
 Route::get('/all-product', [APIController::class, 'getAllProduct']);
 Route::get('/all-category', [APIController::class, 'getAllCategory']);

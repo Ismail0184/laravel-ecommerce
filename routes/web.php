@@ -26,6 +26,7 @@ use App\Http\Controllers\AdminOrderController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/category-product/{id}', [HomeController::class, 'categoryProduct'])->name('category-product');
 Route::get('/sub-category-product/{id}', [HomeController::class, 'subCategoryProduct'])->name('sub-category-product');
 Route::get('/product-detail/{id}', [HomeController::class, 'productDetail'])->name('product-detail');

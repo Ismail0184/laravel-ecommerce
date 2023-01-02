@@ -18,6 +18,11 @@ class HomeController extends Controller
         ]);
     }
 
+    public function about()
+    {
+        return view('website.home.about');
+    }
+
     public function categoryProduct($id)
     {
         $this->products = Product::where('category_id', $id)->orderBy('id', 'desc')->get();
